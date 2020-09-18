@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="GET" action="/translated">
+
+<div class="form-group">
+<center><h4> <label for="id_textarea"> enter text in any language you want </label></h4></center>
+<textarea name="text" class="form-control" id="id_textarea"  rows="6"></textarea>
+
+</div>
+
+<br />
+
+<div class="form-group">
+   <center> <h4> <label for="id_select"> select language to convert </label></h4></center>
+    <select name="lang" multiple class="form-control" id="id_select" >
+        <option value="hi">hindi</option>
+        <option value="fr">french</option>
+        <option value="ar">ar</option>
+        <option value="en">en</option>
+    </select>
+
+    <br>
+<center>
+    <button type="submit" class="btn btn-primary btn-lg ">Translate</button>
+</center>
+
+</div>
+</form>
+  
+{% endblock content %}
